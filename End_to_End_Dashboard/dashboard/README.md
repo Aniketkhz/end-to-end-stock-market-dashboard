@@ -20,6 +20,6 @@ The primary purpose of this dashboard is to allow users to explore stock market 
 - Date range filtering for customized analysis.
 - Display of key performance indicators (KPIs) related to stock performance.
 
-## Dependencies
+## Dependencies and Requirements 
 
 Ensure that all required libraries are installed as specified in the `requirements.txt` file.
