@@ -30,7 +30,7 @@ def clean_and_process_data(file_path):
     # Compute Daily Change %
     df['Daily Change %'] = df['Close'].pct_change() * 100
 
-    # Compute moving averages
+    # Compute all moving averages
     df['MA_20'] = df['Close'].rolling(window=20).mean()
     df['MA_50'] = df['Close'].rolling(window=50).mean()
 
