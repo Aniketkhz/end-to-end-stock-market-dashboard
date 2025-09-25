@@ -16,7 +16,7 @@ def fetch_stock_data(ticker, period='1y', interval='1d'):
         logging.warning(f"No data found for {ticker}")
         return
 
-    # Reset index so Date becomes a column
+    # Reset the index so Date becomes a column
     stock_data.reset_index(inplace=True)
 
     # Save CSV with Date column
