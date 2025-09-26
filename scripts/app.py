@@ -37,7 +37,7 @@ col1, col2 = st.columns(2)
 col1.metric("Latest Close Price", f"${latest_close:.2f}")
 col2.metric("Daily Change %", f"{latest_change:.2f}%")
 
-# Close Price & Moving Averages
+# Close Price and Moving Averages
 st.subheader("Close Price & Moving Averages")
 fig = go.Figure()
 fig.add_trace(go.Scatter(x=df['Date'], y=df['Close'], mode='lines', name='Close'))
