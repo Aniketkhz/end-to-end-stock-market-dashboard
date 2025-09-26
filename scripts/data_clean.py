@@ -23,7 +23,7 @@ def clean_and_process_data(file_path):
         if col in df.columns:
             df[col] = pd.to_numeric(df[col], errors='coerce')
 
-    # Fill missing values and remove duplicates
+    # Fill missing values & remove duplicates
     df.ffill(inplace=True)
     df.drop_duplicates(inplace=True)
 
