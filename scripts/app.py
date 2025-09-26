@@ -29,7 +29,7 @@ start_date = st.sidebar.date_input("Start Date", df['Date'].min())
 end_date = st.sidebar.date_input("End Date", df['Date'].max())
 df = df[(df['Date'] >= pd.to_datetime(start_date)) & (df['Date'] <= pd.to_datetime(end_date))]
 
-# Dashboard Title & KPIs
+# Dashboard Title & KPI's
 st.title(f"📈 {selected_ticker} Stock Dashboard")
 latest_close = df['Close'].iloc[-1]
 latest_change = df['Daily Change %'].iloc[-1]
