@@ -26,7 +26,7 @@ def job():
     except Exception as e:
         logging.error(f"An error occurred: {e}")
 
-# Schedule the job every day at a specific time (e.g., 09:00 AM)
+
 schedule.every().day.at("09:00").do(job)
 
 if __name__ == "__main__":
