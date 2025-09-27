@@ -10,7 +10,7 @@ df = pd.read_csv(data_file)
 # Title of the dashboard
 st.title('Stock Market Dashboard')
 
-# Sidebar for user input
+
 st.sidebar.header('User Input Features')
 ticker = st.sidebar.selectbox('Select Ticker Symbol', df['Ticker'].unique())
 start_date = st.sidebar.date_input('Start Date', df['Date'].min())
