@@ -13,7 +13,7 @@ def job():
     try:
         logging.info("Starting daily stock data update...")
         
-        # Fetch new stock data
+        
         fetch_data(ticker='AAPL', period='1y', interval='1d')
         
         # Clean and process data
