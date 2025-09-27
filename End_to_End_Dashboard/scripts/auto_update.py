@@ -16,7 +16,7 @@ def job():
         
         fetch_data(ticker='AAPL', period='1y', interval='1d')
         
-        # Clean and process data
+        
         clean_data()
         
         # Run analysis and predictions
