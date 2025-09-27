@@ -40,7 +40,7 @@ def clean_and_process_data(file_path):
     logging.info(f"Processed data saved to {processed_file_path}")
 
 if __name__ == "__main__":
-    # Use absolute path to avoid issues
+    
     data_folder = os.path.join(os.path.dirname(os.path.abspath(__file__)), '..', 'data')
     file_name = 'AAPL_data.csv'  # Change ticker if needed
     clean_and_process_data(os.path.join(data_folder, file_name))
