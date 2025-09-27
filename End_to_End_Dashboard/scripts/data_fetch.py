@@ -13,7 +13,7 @@ def fetch_stock_data(ticker, period='1y', interval='1d'):
         os.makedirs(data_dir)
         logging.info(f"Created directory: {data_dir}")
 
-    # Fetch data
+    
     try:
         stock_data = yf.download(ticker, period=period, interval=interval)
         if stock_data.empty:
