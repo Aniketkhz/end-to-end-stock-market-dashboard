@@ -19,7 +19,7 @@ def job():
         
         clean_data()
         
-        # Run analysis and predictions
+        
         analyze_data()
         
         logging.info("Daily stock data update completed successfully.")
