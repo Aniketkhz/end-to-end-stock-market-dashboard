@@ -18,10 +18,25 @@ st.sidebar.header("Stock Dashboard Settings")
 BASE_DIR = os.path.dirname(os.path.abspath(__file__))
 data_folder = os.path.join(BASE_DIR, '..', 'data')
 
-tickers = [f.replace('_processed.csv', '') for f in os.listdir(data_folder) if f.endswith('_processed.csv')]
+# Get available tickers from processed CSV files
+try:
+    tickers = [f.replace('_data_processed.csv', '') for f in os.listdir(data_folder) if f.endswith('_data_processed.csv')]
+    if not tickers:
+        st.error("No processed data files found. Please run data_fetch.py and data_clean.py first.")
+        st.stop()
+except FileNotFoundError:
+    st.error("Data folder not found. Please create the data folder and add processed CSV files.")
+    st.stop()
+
 selected_ticker = st.sidebar.selectbox("Select Ticker", tickers)
 
-file_path = os.path.join('data', 'AAPL_data_processed.csv')
+# Use the selected ticker to build the file path
+file_path = os.path.join(data_folder, f'{selected_ticker}_data_processed.csv')
+
+# Check if the file exists
+if not os.path.exists(file_path):
+    st.error(f"Data file not found: {file_path}")
+    st.stop()
 
 df = load_data(file_path)
 
