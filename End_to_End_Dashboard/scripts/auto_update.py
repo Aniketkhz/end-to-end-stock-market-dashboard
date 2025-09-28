@@ -6,6 +6,7 @@ from scripts.data_fetch import fetch_data
 from scripts.data_clean import clean_data
 from scripts.analysis import analyze_data
 
+#auto update
 
 logging.basicConfig(level=logging.INFO, format='%(asctime)s - %(levelname)s - %(message)s')
 
