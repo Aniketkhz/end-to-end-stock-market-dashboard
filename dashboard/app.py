@@ -19,7 +19,7 @@ end_date = st.sidebar.date_input('End Date', df['Date'].max())
 # Filter data based on user input
 filtered_data = df[(df['Ticker'] == ticker) & (df['Date'] >= str(start_date)) & (df['Date'] <= str(end_date))]
 
-# Line chart for 
+# Line chart
 st.subheader('Close Price Over Time')
 fig_close = px.line(filtered_data, x='Date', y='Close', title='Close Price')
 st.plotly_chart(fig_close)
