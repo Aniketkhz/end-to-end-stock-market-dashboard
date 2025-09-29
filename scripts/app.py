@@ -63,7 +63,7 @@ if 'MA_50' in df.columns:
 fig.update_layout(xaxis_title="Date", yaxis_title="Price ($)", template="plotly_dark", hovermode="x unified")
 st.plotly_chart(fig, use_container_width=True)
 
-# Daily Change perc
+# Daily Change per
 st.subheader("Daily Change %")
 fig2 = go.Figure()
 fig2.add_trace(go.Bar(x=df['Date'], y=df['Daily Change %'], name='Daily Change %'))
