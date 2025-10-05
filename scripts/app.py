@@ -87,7 +87,7 @@ fig.update_layout(
 )
 st.plotly_chart(fig, use_container_width=True)
 
-# Daily Change %
+# Daily Changes %
 st.subheader("📈 Daily Change %")
 colors = ['red' if x < 0 else 'green' for x in df_filtered['Daily Change %']]
 fig2 = go.Figure()
