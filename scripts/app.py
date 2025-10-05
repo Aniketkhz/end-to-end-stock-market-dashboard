@@ -106,7 +106,7 @@ fig2.update_layout(
 )
 st.plotly_chart(fig2, use_container_width=True)
 
-# Volume Chart
+# Volume Charts
 if 'Volume' in df_filtered.columns:
     st.subheader("📊 Trading Volume")
     fig3 = go.Figure()
