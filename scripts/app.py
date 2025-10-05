@@ -124,6 +124,6 @@ if 'Volume' in df_filtered.columns:
     )
     st.plotly_chart(fig3, use_container_width=True)
 
-# Data Table
+# Data Tables
 with st.expander("📋 View Raw Data"):
     st.dataframe(df_filtered.tail(50), use_container_width=True)
