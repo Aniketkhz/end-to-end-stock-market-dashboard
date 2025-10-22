@@ -46,7 +46,7 @@ if not os.path.exists(file_path):
 
 df = load_data(file_path)
 
-# Date range filt
+# Date range fil
 start_date = st.sidebar.date_input("Start Date", df['Date'].min().date())
 end_date = st.sidebar.date_input("End Date", df['Date'].max().date())
 df_filtered = df[(df['Date'] >= pd.to_datetime(start_date)) & (df['Date'] <= pd.to_datetime(end_date))]
