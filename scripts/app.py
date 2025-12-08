@@ -56,7 +56,7 @@ if df_filtered.empty:
     st.error("❌ No data available for the selected date range.")
     st.stop()
 
-# Dashboard 
+# Dashboard
 st.title(f"📈 {selected_ticker} Stock Dashboard")
 latest_close = df_filtered['Close'].iloc[-1]
 latest_change = df_filtered['Daily Change %'].iloc[-1]
