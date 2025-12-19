@@ -66,7 +66,7 @@ col2.metric("Daily Change %", f"{latest_change:.2f}%",
             delta=f"{latest_change:.2f}%")
 col3.metric("Total Days", len(df_filtered))
 
-# Close Price and Moving A
+# Close Price and Moving 
 st.subheader("📊 Close Price & Moving Averages")
 fig = go.Figure()
 fig.add_trace(go.Scatter(x=df_filtered['Date'], y=df_filtered['Close'], 
